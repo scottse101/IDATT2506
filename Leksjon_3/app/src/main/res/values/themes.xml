@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Theme.Leksjon_3" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Tilpassede attributter for tema -->
+
+        <!-- Farge for ActionBar -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Farge for statuslinje -->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
+        <!-- Farge for navigasjonslinje -->
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+
+        <!-- Tekstfarge for ActionBar -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+
+        <!-- Fjern eller endre fontfamilie til en standard Android-font -->
+        <!-- <item name="android:fontFamily">sans-serif</item> -->
+    </style>
+
+</resources>
