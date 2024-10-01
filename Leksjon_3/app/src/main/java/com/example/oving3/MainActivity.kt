@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var nameEditText: EditText
     private lateinit var birthDateEditText: EditText
 
-    // Liste som kan oppdateres
     private val friendList = mutableListOf<Friend>()
 
     @SuppressLint("MissingInflatedId")
@@ -27,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_friend)
 
-        // Koble til RecyclerView og adapter
         recyclerView = findViewById(R.id.rv_friend_list)
         addButton = findViewById(R.id.btn_add_friend)
         nameEditText = findViewById(R.id.et_name)
@@ -37,9 +35,9 @@ class MainActivity : AppCompatActivity() {
         friendAdapter = FriendAdapter(friendList) { friend, position ->
             showEditFriendDialog(friend, position)
         }
+
         recyclerView.adapter = friendAdapter
 
-        // Legge til ny venn når knappen trykkes
         addButton.setOnClickListener {
             val name = nameEditText.text.toString()
             val birthDate = birthDateEditText.text.toString()
@@ -54,25 +52,21 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Funksjon for å vise en dialog for å redigere en venn
     private fun showEditFriendDialog(friend: Friend, position: Int) {
-        // Lag en dialog for å redigere venn
         val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_edit_friend, null)
         val nameEditText = dialogView.findViewById<EditText>(R.id.et_edit_name)
         val birthDateEditText = dialogView.findViewById<EditText>(R.id.et_edit_birth_date)
 
-        // Fyll inn gjeldende data
         nameEditText.setText(friend.name)
         birthDateEditText.setText(friend.birthDate)
 
-        // Opprett dialogen
         AlertDialog.Builder(this)
             .setTitle("Edit Friend")
             .setView(dialogView)
             .setPositiveButton("Save") { _, _ ->
                 friend.name = nameEditText.text.toString()
                 friend.birthDate = birthDateEditText.text.toString()
-                friendAdapter.notifyItemChanged(position)  // Oppdater elementet i listen
+                friendAdapter.notifyItemChanged(position)
             }
             .setNegativeButton("Cancel", null)
             .show()

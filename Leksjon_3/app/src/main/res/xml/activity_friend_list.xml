@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
-
-    <!-- RecyclerView for displaying the list of friends -->
+    
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_friend_list"
         android:layout_width="match_parent"

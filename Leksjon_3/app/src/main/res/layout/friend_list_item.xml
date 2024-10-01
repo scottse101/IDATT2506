@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:padding="8dp">
 
-    <!-- TextView for vennens navn -->
     <TextView
         android:id="@+id/tv_friend_name"
         android:layout_width="wrap_content"
@@ -15,7 +14,6 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <!-- TextView for vennens fødselsdato -->
     <TextView
         android:id="@+id/tv_friend_birth_date"
         android:layout_width="wrap_content"
