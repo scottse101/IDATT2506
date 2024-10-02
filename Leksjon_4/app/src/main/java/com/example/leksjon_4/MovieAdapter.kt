@@ -26,7 +26,7 @@ class MovieAdapter(
     }
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        holder.bind(movieList[position], clickListener)
+        holder.titleTextView.text = movieList[position].title
     }
 
     override fun getItemCount(): Int {

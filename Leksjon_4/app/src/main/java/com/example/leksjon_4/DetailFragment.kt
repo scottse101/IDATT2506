@@ -1,10 +1,10 @@
 package com.example.leksjon_4
 
-import android.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -25,7 +25,7 @@ class DetailFragment : Fragment() {
         return view
     }
 
-    fun updateMovieDetails(movie: com.example.leksjon_4.Movie) {
+    fun updateMovieDetails(movie: Movie) {
         movieTitle.text = movie.title
         movieDescription.text = movie.description
         movieImage.setImageResource(movie.imageResId)
