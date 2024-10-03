@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ListFragment : Fragment() {
 
-    private lateinit var movieList: RecyclerView
     private lateinit var movieAdapter: MovieAdapter
 
     override fun onCreateView(
@@ -20,20 +19,18 @@ class ListFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_list, container, false)
 
-        movieList = view.findViewById(R.id.recycler_view)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
+        recyclerView.layoutManager = LinearLayoutManager(context)
 
-        movieList.layoutManager = LinearLayoutManager(context)
-        Log.d("ListFragment", "MovieData size: ${MovieData.movieData.size}")
-
-        movieAdapter = MovieAdapter(MovieData.movieData) { movie ->
-            (activity as MainActivity).onMovieSelected(movie)
+        movieAdapter = MovieAdapter(MovieData.movieData) { selectedMovie ->
+            (activity as MainActivity).onMovieSelected(selectedMovie)
         }
-
-        movieList.adapter = movieAdapter
+        recyclerView.adapter = movieAdapter
 
         return view
     }
 }
+
 
 
 
