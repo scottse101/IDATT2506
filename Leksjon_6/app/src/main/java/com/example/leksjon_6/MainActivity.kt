@@ -8,6 +8,7 @@ import kotlinx.coroutines.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.PrintWriter
+import java.net.InetAddress
 import java.net.ServerSocket
 import java.net.Socket
 
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val serverPort = 12345
-    private var isServer = true // Sett til false hvis denne enheten er klient
+    private var isServer = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         if (isServer) {
             startServer()
         } else {
-            connectToServer("192.168.1.2") // Sett til serverens IP-adresse
+            connectToServer("10.0.2.2")
         }
 
         binding.buttonSend.setOnClickListener {
@@ -38,15 +39,16 @@ class MainActivity : AppCompatActivity() {
     private fun startServer() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val serverSocket = ServerSocket(serverPort)
+                val serverSocket = ServerSocket(serverPort, 0, InetAddress.getByName("0.0.0.0"))
                 Log.d("Server", "Server started, waiting for clients...")
                 val clientSocket = serverSocket.accept()
 
                 val input = BufferedReader(InputStreamReader(clientSocket.getInputStream()))
-                val output = PrintWriter(clientSocket.getOutputStream(), true)
+                PrintWriter(clientSocket.getOutputStream(), true)
 
                 while (true) {
                     val message = input.readLine()
+                    Log.d("Server", "Mottatt melding: $message")
                     if (message != null) {
                         withContext(Dispatchers.Main) {
                             binding.textViewReceivedMessages.append("\nMottatt: $message")
@@ -63,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val socket = Socket(ipAddress, serverPort)
-                val output = PrintWriter(socket.getOutputStream(), true)
+                PrintWriter(socket.getOutputStream(), true)
                 val input = BufferedReader(InputStreamReader(socket.getInputStream()))
 
                 while (true) {
@@ -83,7 +85,7 @@ class MainActivity : AppCompatActivity() {
     private fun sendMessage(message: String) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val socket = Socket("192.168.1.2", serverPort) // IP-adressen til tjeneren
+                val socket = Socket("10.0.2.2", serverPort)
                 val output = PrintWriter(socket.getOutputStream(), true)
 
                 output.println(message)
