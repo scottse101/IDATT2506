@@ -1,101 +1,145 @@
 package com.example.leksjon_6
 
 import android.os.Bundle
-import android.util.Log
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.leksjon_6.databinding.ActivityMainBinding
-import kotlinx.coroutines.*
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.io.PrintWriter
-import java.net.InetAddress
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.launch
 import java.net.ServerSocket
 import java.net.Socket
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-    private val serverPort = 12345
-    private var isServer = true
+    private lateinit var sentMessagesTextView: TextView
+    private lateinit var receivedMessagesTextView: TextView
+    private lateinit var editTextMessage: EditText
+    private lateinit var buttonSend: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        editTextMessage = findViewById(R.id.editTextMessage)
+        buttonSend = findViewById(R.id.buttonSend)
+        sentMessagesTextView = findViewById(R.id.textViewDisplaySentMessages)
+        receivedMessagesTextView = findViewById(R.id.textViewDisplayReceivedMessages)
 
-        if (isServer) {
-            startServer()
-        } else {
-            connectToServer("10.0.2.2")
-        }
+        Server(receivedMessagesTextView).start()
 
-        binding.buttonSend.setOnClickListener {
-            val message = binding.editTextMessage.text.toString()
-            sendMessage(message)
-        }
-    }
-
-    private fun startServer() {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val serverSocket = ServerSocket(serverPort, 0, InetAddress.getByName("0.0.0.0"))
-                Log.d("Server", "Server started, waiting for clients...")
-                val clientSocket = serverSocket.accept()
-
-                val input = BufferedReader(InputStreamReader(clientSocket.getInputStream()))
-                PrintWriter(clientSocket.getOutputStream(), true)
-
-                while (true) {
-                    val message = input.readLine()
-                    Log.d("Server", "Mottatt melding: $message")
-                    if (message != null) {
-                        withContext(Dispatchers.Main) {
-                            binding.textViewReceivedMessages.append("\nMottatt: $message")
-                        }
-                    }
+        buttonSend.setOnClickListener {
+            val message = editTextMessage.text.toString()
+            if (message.isNotEmpty()) {
+                CoroutineScope(Dispatchers.IO).launch {
+                    Client(sentMessagesTextView).sendMessage(message)
                 }
-            } catch (e: Exception) {
-                e.printStackTrace()
+                editTextMessage.text.clear()
             }
         }
-    }
 
-    private fun connectToServer(ipAddress: String) {
         CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val socket = Socket(ipAddress, serverPort)
-                PrintWriter(socket.getOutputStream(), true)
-                val input = BufferedReader(InputStreamReader(socket.getInputStream()))
-
-                while (true) {
-                    val message = input.readLine()
-                    if (message != null) {
-                        withContext(Dispatchers.Main) {
-                            binding.textViewReceivedMessages.append("\nMottatt: $message")
-                        }
-                    }
-                }
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
-    }
-
-    private fun sendMessage(message: String) {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val socket = Socket("10.0.2.2", serverPort)
-                val output = PrintWriter(socket.getOutputStream(), true)
-
-                output.println(message)
-
-                withContext(Dispatchers.Main) {
-                    binding.textViewSentMessages.append("\nSendt: $message")
-                }
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
+            Client(sentMessagesTextView).start()
         }
     }
 }
+
+class Server(private val receivedTextView: TextView, private val PORT: Int = 12345) {
+    fun start() {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                ServerSocket(PORT).use { serverSocket ->
+                    while (true) {
+                        serverSocket.accept().use { clientSocket ->
+                            readFromClient(clientSocket)
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    private fun readFromClient(socket: Socket) {
+        try {
+            val reader = socket.getInputStream().bufferedReader()
+            val message = reader.readLine()
+            updateReceivedUI("Mottatt melding fra Klient: $message")
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun updateReceivedUI(message: String) {
+        MainScope().launch {
+            receivedTextView.append("\n$message")
+        }
+    }
+}
+
+
+class Client(private val sentTextView: TextView, private val SERVER_IP: String = "10.0.2.2", private val SERVER_PORT: Int = 12345) {
+    private var listeningSocket: Socket? = null
+
+    fun start() {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                listeningSocket = Socket(SERVER_IP, SERVER_PORT)
+                updateSentUI("Koblet til serveren")
+
+                listenForMessages(listeningSocket!!)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    fun sendMessage(message: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                Socket(SERVER_IP, SERVER_PORT).use { socket ->
+                    val writer = socket.getOutputStream().bufferedWriter()
+                    writer.write(message + "\n")
+                    writer.flush()
+                    updateSentUI("Sendt melding: $message")
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
+    private fun listenForMessages(socket: Socket) {
+        try {
+            val reader = socket.getInputStream().bufferedReader()
+            var message: String?
+
+            while (true) {
+                message = reader.readLine() ?: break
+                updateReceivedUI("Melding fra serveren: $message")
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun updateSentUI(message: String) {
+        MainScope().launch {
+            sentTextView.append("\n$message")
+        }
+    }
+
+    private fun updateReceivedUI(message: String) {
+        MainScope().launch {
+            val receivedMessagesTextView = sentTextView.rootView.findViewById<TextView>(R.id.textViewDisplayReceivedMessages)
+            receivedMessagesTextView.append("\n$message")
+        }
+    }
+}
+
+
+
+

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -21,12 +22,26 @@
         android:id="@+id/textViewSentMessages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sendte meldinger:" />
+        android:text="Sendte meldinger:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewDisplaySentMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TextView
         android:id="@+id/textViewReceivedMessages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mottatte meldinger:" />
+        android:text="Mottatte meldinger:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewDisplayReceivedMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
 
 </LinearLayout>

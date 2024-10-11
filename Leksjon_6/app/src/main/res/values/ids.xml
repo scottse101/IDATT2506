@@ -4,4 +4,7 @@
     <item name="textViewSentMessages" type="id"/>
     <item name="textViewReceivedMessages" type="id"/>
     <item name="editTextMessage" type="id"/>
+    <item name="textViewDisplaySentMessages" type="id"/>
+    <item name="textViewDisplayReceivedMessages" type="id"/>
+    <item name="textView" type="id" />
 </resources>
