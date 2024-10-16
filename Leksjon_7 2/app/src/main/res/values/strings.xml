@@ -1,0 +1,21 @@
+<resources>
+    <string name="Leksjon_07" />
+    <string name="back_button">Back</string>
+    <string name="night_mode_default_value">MODE_NIGHT_FOLLOW_SYSTEM</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="night_mode_title">Choose Night Mode</string>
+    <string name="info" />
+    <string name="settings">Settings</string>
+
+    <string-array name="background_color_labels">
+        <item>White</item>
+        <item>Blue</item>
+        <item>Green</item>
+    </string-array>
+
+    <string-array name="background_color_values">
+        <item>white</item>
+        <item>blue</item>
+        <item>green</item>
+    </string-array>
+</resources>
