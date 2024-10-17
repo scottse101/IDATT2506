@@ -33,6 +33,7 @@ class MyPreferenceManager(private val activity: Activity) {
 			colorValues[0] -> R.color.white
 			colorValues[1] -> R.color.blue
 			colorValues[2] -> R.color.green
+			colorValues[3] -> R.color.red
 			else -> R.color.white
 		}
 	}

@@ -89,10 +89,10 @@ class Database(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
 		return actors
 	}
 
-    @SuppressLint("Range")
-    fun getAllMoviesActorsAndDirectors(): ArrayList<String> {
-		val moviesAndActorsAndDirectors = ArrayList<String>()
-		val query = "SELECT $COL_TITLE, $COL_DIRECTOR FROM $TABLE_MOVIES"
+	@SuppressLint("Range")
+	fun getAllMoviesActorsAndDirectors(): ArrayList<String> {
+		val moviesActorsAndDirectors = ArrayList<String>()
+		val query = "SELECT $COL_TITLE, $COL_ACTORS, $COL_DIRECTOR FROM $TABLE_MOVIES"
 		val db = readableDatabase
 		val cursor = db.rawQuery(query, null)
 		if (cursor.moveToFirst()) {
@@ -100,14 +100,14 @@ class Database(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
 				val movie = cursor.getString(cursor.getColumnIndex(COL_TITLE))
 				val director = cursor.getString(cursor.getColumnIndex(COL_DIRECTOR))
 				val actors = cursor.getString(cursor.getColumnIndex(COL_ACTORS))
-				getAllMoviesActorsAndDirectors().add("$movie by $actors by $director")
+				moviesActorsAndDirectors.add("$movie by $actors by $director")
 			} while (cursor.moveToNext())
 		}
 		cursor.close()
-		return moviesAndActorsAndDirectors
+		return moviesActorsAndDirectors
 	}
 
-    @SuppressLint("Range")
+	@SuppressLint("Range")
     fun getMoviesByDirector(director: String): ArrayList<String> {
 		val movies = ArrayList<String>()
 		val query = "SELECT $COL_TITLE FROM $TABLE_MOVIES WHERE $COL_DIRECTOR = ?"
@@ -133,5 +133,19 @@ class Database(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
 		}
 		cursor.close()
 		return actors
+	}
+
+	fun getMoviesByActors(actor: String): ArrayList<String> {
+		val movies = ArrayList<String>()
+		val query = "SELECT $COL_TITLE FROM $TABLE_MOVIES WHERE $COL_ACTORS LIKE ?"
+		val db = readableDatabase
+		val cursor = db.rawQuery(query, arrayOf("%$actor%"))
+		if (cursor.moveToFirst()) {
+			do {
+				movies.add(cursor.getString(cursor.getColumnIndex(COL_TITLE)))
+			} while (cursor.moveToNext())
+		}
+		cursor.close()
+		return movies
 	}
 }

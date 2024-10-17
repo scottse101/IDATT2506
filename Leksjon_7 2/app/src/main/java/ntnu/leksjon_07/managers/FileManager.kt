@@ -58,7 +58,7 @@ class FileManager(private val activity: AppCompatActivity) {
 	fun exportMoviesToFile(context: Context) {
 		val file = File(context.filesDir, "exported_movies.txt")
 		val db = Database(context)
-		val movies = db.getAllMoviesAndActorsAndDirectors()
+		val movies = db.getAllMoviesActorsAndDirectors()
 
 		file.writeText(movies.joinToString("\n"))
 	}

@@ -71,8 +71,9 @@ class MainActivity : AppCompatActivity() {
 		menu.add(0, 2, 0, "All movies")
 		menu.add(0, 3, 0, "All actors")
 		menu.add(0, 4, 0, "All movies, directors and actors")
-		menu.add(0, 5, 0, "Movies by director")
-		menu.add(0, 6, 0, "Actors by movie")
+		menu.add(0, 5, 0, "Movies by \"Francis Ford Coppola\"")
+		menu.add(0, 6, 0, "Actors in \"The Godfather\"")
+		menu.add(0, 7, 0, "Movies with \"Christian Bale\"")
 		return super.onCreateOptionsMenu(menu)
 	}
 
@@ -85,6 +86,7 @@ class MainActivity : AppCompatActivity() {
 			4 -> showResults(db.getAllMoviesActorsAndDirectors())
 			5 -> showResults(db.getMoviesByDirector("Francis Ford Coppola"))
 			6 -> showResults(db.getActorsByMovie("The Godfather"))
+			7 -> showResults(db.getMoviesByActors("Christian Bale"))
 			else -> return false
 		}
 		return super.onOptionsItemSelected(item)
@@ -93,17 +95,37 @@ class MainActivity : AppCompatActivity() {
 	override fun onResume() {
 		super.onResume()
 
-		val myPreferenceManager = MyPreferenceManager(this)
-		val selectedColor = myPreferenceManager.getString("backgroundColor", "white")
+		val myPreferenceManager = MyPreferenceManager(activity = this)
+
+		val selectedColor = myPreferenceManager.getString(key = "backgroundColor", defaultValue = "white")
+		Log.d("MainActivity", "Selected color from preferences: $selectedColor")
+
 		val minLayout = findViewById<View>(R.id.minLayout)
+		Log.d("MainActivity", "minLayout found: ${minLayout != null}")
 
 		when (selectedColor) {
-			"white" -> minLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
-			"blue" -> minLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
-			"green" -> minLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
-			else -> minLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+			"white" -> {
+				minLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+				Log.d("MainActivity", "Background color set to WHITE")
+			}
+			"blue" -> {
+				minLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+				Log.d("MainActivity", "Background color set to BLUE")
+			}
+			"green" -> {
+				minLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
+				Log.d("MainActivity", "Background color set to GREEN")
+			}
+			"red" -> {
+				minLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+				Log.d("MainActivity", "Background color set to RED")
+			}
+			else -> {
+				minLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+				Log.d("MainActivity", "Background color set to default (WHITE)")
+			}
 		}
-		Log.d("MainActivity", "Selected color: $selectedColor")
 	}
+
 
 }
