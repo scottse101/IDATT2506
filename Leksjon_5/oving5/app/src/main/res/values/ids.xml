@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="et_name" type="id" />
+    <item name="et_card_number" type="id" />
+    <item name="et_guess" type="id" />
+    <item name="btn_start_game" type="id" />
+    <item name="btn_submit_guess" type="id" />
+    <item name="tv_response" type="id" />
+</resources>
