@@ -1,0 +1,7 @@
+ntnu.leksjon_07.test.app-androidTest-0 /Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/build/generated/res/resValues/androidTest/debug
+ntnu.leksjon_07.test.app-androidTest-1 /Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/build/generated/res/rs/androidTest/debug
+ntnu.leksjon_07.test.app-mergeDebugAndroidTestResources-2 /Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+ntnu.leksjon_07.test.app-mergeDebugAndroidTestResources-3 /Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+ntnu.leksjon_07.test.app-merged_res-4 /Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/build/intermediates/merged_res/debugAndroidTest
+ntnu.leksjon_07.test.app-androidTest-5 /Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/androidTest/res
+ntnu.leksjon_07.test.app-androidTestDebug-6 /Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/androidTestDebug/res

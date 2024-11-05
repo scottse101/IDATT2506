@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "ntnu.leksjon_07.app-mergeDebugResources-24:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/scottse/.gradle/caches/transforms-3/74e8f5ac1fb09410f73f361c52c427f7/transformed/preference-1.1.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/layout_min_layout.xml.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/layout/min_layout.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-ldpi_settings_icon.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-ldpi/settings_icon.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-xxhdpi_settings_icon.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-xxhdpi/settings_icon.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ntnu.leksjon_07.app-merged_res-26:/menu_settings.xml.flat",
+        "source": "ntnu.leksjon_07.app-main-28:/menu/settings.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-hdpi_settings_icon.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-hdpi/settings_icon.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-ldpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/menu_settings.xml.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/menu/settings.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-mdpi_settings_icon.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-mdpi/settings_icon.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/layout_activity_settings.xml.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/xml_preference_screen.xml.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/xml/preference_screen.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ntnu.leksjon_07.app-merged_res-26:/layout_min_layout.xml.flat",
+        "source": "ntnu.leksjon_07.app-main-28:/layout/min_layout.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-anydpi-v21_settings_icon.xml.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-anydpi-v21/settings_icon.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/raw_movies.txt.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/raw/movies.txt"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-xxxhdpi_settings_icon.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-xxxhdpi/settings_icon.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-xhdpi_settings_icon.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-xhdpi/settings_icon.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-merged_res-26:/drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-pngs-21:/drawable-anydpi-v21/ic_launcher_background.xml"
+    }
+]

@@ -1,0 +1,4 @@
+#Thu Oct 17 12:23:38 CEST 2024
+base.0=/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

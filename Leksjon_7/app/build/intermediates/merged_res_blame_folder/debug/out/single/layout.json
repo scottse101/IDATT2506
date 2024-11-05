@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-mergeDebugResources-25:/layout/activity_settings.xml",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-mergeDebugResources-25:/layout/min_layout.xml",
+        "source": "/Users/scottse/.gradle/daemon/7.3.3/ntnu.leksjon_07.app-main-28:/layout/min_layout.xml"
+    },
+    {
+        "merged": "ntnu.leksjon_07.app-mergeDebugResources-25:/layout/min_layout.xml",
+        "source": "ntnu.leksjon_07.app-main-28:/layout/min_layout.xml"
+    }
+]

@@ -1,0 +1,91 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ntnu.leksjon_07"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:5:5-27:19
+12        android:allowBackup="true"
+12-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.8.0] /Users/scottse/.gradle/caches/transforms-3/39858a0edda35c9bad4a02052f2a3484/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+14        android:configChanges="uiMode"
+14-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:7:9-39
+15        android:debuggable="true"
+16        android:icon="@mipmap/ic_launcher"
+16-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:8:9-43
+17        android:label="@string/Leksjon_07"
+17-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:9:9-43
+18        android:roundIcon="@mipmap/ic_launcher_round"
+18-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:10:9-54
+19        android:supportsRtl="true"
+19-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:11:9-35
+20        android:testOnly="true"
+21        android:theme="@style/Theme.Datalagring" >
+21-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:12:9-49
+22        <activity
+22-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:13:9-19:20
+23            android:name="ntnu.leksjon_07.MainActivity"
+23-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:13:19-62
+24            android:exported="true" >
+24-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:14:13-36
+25            <intent-filter>
+25-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:15:13-18:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:16:17-69
+26-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:16:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:17:17-77
+28-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:17:27-74
+29            </intent-filter>
+30        </activity>
+31        <activity
+31-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:20:9-26:20
+32            android:name="ntnu.leksjon_07.SettingsActivity"
+32-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:20:19-66
+33            android:exported="false" >
+33-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:21:13-37
+34            <intent-filter>
+34-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:22:13-25:29
+35                <action android:name="inft2501.leksjon_07.SettingsActivity" />
+35-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:23:17-79
+35-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:23:25-76
+36
+37                <category android:name="android.intent.category.DEFAULT" />
+37-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:24:17-76
+37-->/Users/scottse/Desktop/IDATT2506 - Applikasjonsutvikling for mobile enheter/Leksjon_7 2/app/src/main/AndroidManifest.xml:24:27-73
+38            </intent-filter>
+39        </activity>
+40
+41        <provider
+41-->[androidx.emoji2:emoji2:1.0.0] /Users/scottse/.gradle/caches/transforms-3/8b34a7daa78d2d0b4144cc2e0210eb8a/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+42            android:name="androidx.startup.InitializationProvider"
+42-->[androidx.emoji2:emoji2:1.0.0] /Users/scottse/.gradle/caches/transforms-3/8b34a7daa78d2d0b4144cc2e0210eb8a/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+43            android:authorities="ntnu.leksjon_07.androidx-startup"
+43-->[androidx.emoji2:emoji2:1.0.0] /Users/scottse/.gradle/caches/transforms-3/8b34a7daa78d2d0b4144cc2e0210eb8a/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+44            android:exported="false" >
+44-->[androidx.emoji2:emoji2:1.0.0] /Users/scottse/.gradle/caches/transforms-3/8b34a7daa78d2d0b4144cc2e0210eb8a/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+45            <meta-data
+45-->[androidx.emoji2:emoji2:1.0.0] /Users/scottse/.gradle/caches/transforms-3/8b34a7daa78d2d0b4144cc2e0210eb8a/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+46                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+46-->[androidx.emoji2:emoji2:1.0.0] /Users/scottse/.gradle/caches/transforms-3/8b34a7daa78d2d0b4144cc2e0210eb8a/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+47                android:value="androidx.startup" />
+47-->[androidx.emoji2:emoji2:1.0.0] /Users/scottse/.gradle/caches/transforms-3/8b34a7daa78d2d0b4144cc2e0210eb8a/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+48            <meta-data
+48-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/scottse/.gradle/caches/transforms-3/9ecb126e81477f2ddbd588adab94e491/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+49                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+49-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/scottse/.gradle/caches/transforms-3/9ecb126e81477f2ddbd588adab94e491/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+50                android:value="androidx.startup" />
+50-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/scottse/.gradle/caches/transforms-3/9ecb126e81477f2ddbd588adab94e491/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+51        </provider>
+52    </application>
+53
+54</manifest>
